@@ -13,8 +13,8 @@ public class RotateCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        yaw += Input.GetAxis("Mouse X") * sens * Time.deltaTime;
-        pitch -= Input.GetAxis("Mouse Y") * sens * Time.deltaTime;
+        yaw += Input.GetAxis("Mouse X") * sens;
+        pitch -= Input.GetAxis("Mouse Y") * sens;
         pitch = Mathf.Clamp(pitch, -30f, 60f);
 
         Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
