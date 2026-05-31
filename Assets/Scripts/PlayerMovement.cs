@@ -10,6 +10,8 @@ public class PlayerMovementScript : MonoBehaviour
     
     void Start()
     {
+        // Set cursor settings
+        
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -17,18 +19,27 @@ public class PlayerMovementScript : MonoBehaviour
     
     void Update()
     {
-        float  h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        // h, v  contains x,y
+        
+        float  h = Input.GetAxis("Horizontal"); // x
+        float v = Input.GetAxis("Vertical"); // y
 
-        Vector3 camForward = cam.forward;
-        Vector3 camRight = cam.right;
+        // vector 3 = x,y,z 
+        // forward is a static property: 0,0,forward  -> back is 0,0,-forward
+        // left is -right,0,0 -> right is +  
+        
+        Vector3 camForward = cam.forward; // blue axis perhaps forward?
+        Vector3 camRight = cam.right; // red axis perhaps right? 
+        
         camForward.y = 0f;
         camRight.y = 0f;
+        
+        // normalize magnitude of the current vector 1
+        
         camForward.Normalize();
         camRight.Normalize();
         
         movement = (camForward * v + camRight * h);
-        
         
     }
     void FixedUpdate()

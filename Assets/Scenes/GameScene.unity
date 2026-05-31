@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -273,6 +273,9 @@ MonoBehaviour:
   target: {fileID: 397656397}
   height: 2
   distance: 3
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 1
   yaw: 0
   pitch: 0
 --- !u!1 &339248208
@@ -401,7 +404,7 @@ GameObject:
   - component: {fileID: 397656394}
   - component: {fileID: 397656398}
   - component: {fileID: 397656399}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
