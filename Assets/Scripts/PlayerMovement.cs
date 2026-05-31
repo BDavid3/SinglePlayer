@@ -41,6 +41,7 @@ public class PlayerMovementScript : MonoBehaviour
         
         movement = (camForward * v + camRight * h);
         
+        
     }
     void FixedUpdate()
     {
