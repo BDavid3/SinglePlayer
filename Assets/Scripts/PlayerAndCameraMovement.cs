@@ -10,8 +10,8 @@ public class PlayerAndCameraMovement : MonoBehaviour
     [SerializeField] private float sens;
     [SerializeField] private float distance = 3f;
     [SerializeField] private LayerMask collisionMask;
-    private float _yaw;
-    private float _pitch;
+    public float yaw;
+    public float pitch;
 
     private void Start()
     {
@@ -36,11 +36,11 @@ public class PlayerAndCameraMovement : MonoBehaviour
     
     void LateUpdate()
     {
-        _yaw += Input.GetAxis("Mouse X") * sens;
-        _pitch -= Input.GetAxis("Mouse Y") * sens;
-        _pitch = Mathf.Clamp(_pitch, -20f, 60f);
+        yaw += Input.GetAxis("Mouse X") * sens;
+        pitch -= Input.GetAxis("Mouse Y") * sens;
+        pitch = Mathf.Clamp(pitch, -20f, 60f);
 
-        Quaternion rotation = Quaternion.Euler(_pitch, _yaw, 0f);
+        Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
         Vector3 desiredOffset = rotation * new Vector3(0f, 0f, -distance);
         Vector3 desiredPosition = transform.position + desiredOffset;
         

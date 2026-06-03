@@ -1029,8 +1029,6 @@ MonoBehaviour:
   cam: {fileID: 330585546}
   sens: 5
   distance: 3
-  yaw: 5
-  pitch: 3
   collisionMask:
     serializedVersion: 2
     m_Bits: 1
@@ -1153,7 +1151,7 @@ Transform:
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2562,7 +2560,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465170877}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2b396ab32b17fe49bae19948025be75, type: 3}
   m_Name: 
