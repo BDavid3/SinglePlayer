@@ -1,9 +1,4 @@
-// NoteBook change the Again E command to Button Exit
-// Inheritance in the interactable script 
-// Perhaps merging the movement + camera script, and the others 
+// AudioRecorder Setup
+// Delete Faster 
 
-// After Load file -> Set cursor disabled and locked -> and also the intro
-
-
-// Stop The BEEP
 

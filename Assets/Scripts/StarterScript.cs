@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class StarterScript : MonoBehaviour
 {
-    // Disable All Outlines
     private TypeEffect _telephoneScript;
 
     void Awake()
@@ -16,5 +15,10 @@ public class StarterScript : MonoBehaviour
 
         _telephoneScript = FindAnyObjectByType<TypeEffect>(FindObjectsInactive.Include);
         _telephoneScript.enabled = false;
+        
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        
+        
     }
 }

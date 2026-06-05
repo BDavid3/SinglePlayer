@@ -10,15 +10,11 @@ public class TypeEffect : MonoBehaviour
     [SerializeField] private float typingSpeed;
     [TextArea] [SerializeField] private string fullText;
 
-    private void Start()
-    {
-        StartCoroutine(TypeText());
-    }
-
     public void TextCleanUp()
     {
-        StopCoroutine(TypeText());
+        StopAllCoroutines();
         dialogText.text = "";
+        StartCoroutine(TypeText());
     }
 
     IEnumerator TypeText()
