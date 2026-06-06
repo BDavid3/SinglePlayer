@@ -1,8 +1,13 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class StarterScript : MonoBehaviour
 {
+    [SerializeField] private GameObject canvas;
     private TypeEffect _telephoneScript;
+    private Image _image;
 
     void Awake()
     {
@@ -19,6 +24,24 @@ public class StarterScript : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         
+        canvas.SetActive(true);
+        _image = canvas.GetComponentInChildren<Image>();
+    }
+
+    private void Start()
+    {
+        StartCoroutine(Fade());
+    }
+
+    IEnumerator Fade()
+    {
+        Color color = _image.color;
         
+        while (color.a > 0f)
+        {
+            color.a -= 0.001f;
+            _image.color = color;
+            yield return null;
+        }
     }
 }

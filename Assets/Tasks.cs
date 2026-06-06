@@ -1,6 +1,6 @@
 // Rewrite:
 // Make Outline private -> GetComponent on Start
-
+// When not in canvas -> record stop
 
 
 

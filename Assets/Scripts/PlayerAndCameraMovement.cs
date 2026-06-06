@@ -47,7 +47,7 @@ public class PlayerAndCameraMovement : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, desiredOffset.normalized, out hit, distance, collisionMask))
         {
-            cam.position = hit.point + hit.normal * 0.2f;
+            cam.position = hit.point + hit.normal * 0.3f;
         }
         else
         {
