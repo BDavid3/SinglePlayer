@@ -8,11 +8,10 @@ public class TypeEffect : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI dialogText;
     [SerializeField] private float typingSpeed;
-    [SerializeField] private DialogueSequence dialogueSequence;
 
     private int _index;
 
-    public void StartTyping()
+    /*public void StartTyping()
     {
         StartCoroutine(TypeText());
         _index++;
@@ -31,4 +30,4 @@ public class TypeEffect : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
     }
-}
+} */ 
