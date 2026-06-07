@@ -7,6 +7,7 @@ public abstract class InteractBlueprint : MonoBehaviour
     [SerializeField] protected GameObject canvas;
     [SerializeField] private PlayerMovement playerMovementScript;
     protected bool IsInteract;
+    protected bool isLocked;
     private bool _isInRange;
 
     void OnTriggerEnter(Collider other)
@@ -29,7 +30,7 @@ public abstract class InteractBlueprint : MonoBehaviour
 
     void Update()
     {
-        if (_isInRange && Input.GetKeyDown(KeyCode.E))
+        if (_isInRange && Input.GetKeyDown(KeyCode.E) && !isLocked)
         {
             IsInteract = !IsInteract;
             // Set True

@@ -6,7 +6,7 @@ using System.Collections;
 public class StarterScript : MonoBehaviour
 {
     [SerializeField] private GameObject canvas;
-    private TypeEffect _telephoneScript;
+    [SerializeField] private ExplosionScript explosionScript;
     private Image _image;
 
     void Awake()
@@ -17,15 +17,14 @@ public class StarterScript : MonoBehaviour
         {
             outline.enabled = false;
         }
-
-        _telephoneScript = FindAnyObjectByType<TypeEffect>(FindObjectsInactive.Include);
-        _telephoneScript.enabled = false;
         
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         
         canvas.SetActive(true);
         _image = canvas.GetComponentInChildren<Image>();
+        
+        explosionScript.enabled = false;
     }
 
     private void Start()

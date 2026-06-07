@@ -1,0 +1,13 @@
+﻿title: MyCharacter
+---
+Unkown Dude: You're about to blow up
+-> What?
+    Unkown Dude: I'm sorry.
+-> Why's that?
+    Unkown Dude: *Silence*.
+-> RIP me.
+    Unkown Dude: ...
+    Unkown Dude: Indeed.
+Unkown Dude: Goodbye.
+<<explode>>
+===
