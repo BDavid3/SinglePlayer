@@ -25,8 +25,8 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, _yaw, 0f);
         cam.localRotation = Quaternion.Euler(_pitch, 0f, 0f);
         
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
         
         _movement = (transform.forward * vertical + transform.right * horizontal).normalized;
     }
